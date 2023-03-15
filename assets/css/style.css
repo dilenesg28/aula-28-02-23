@@ -6,24 +6,49 @@
 }
 :root{ /*para facilitar a conversão das fontes do navegador*/
     font-size: 62.5%; /* 10px (alvo definido no Figma)  dividido pelo padrão do navegador que é 16px*/
+    /*criando variavel*/
+    --font-default:'Montserrat';
+    --font-heading:'Poppins';
+    --color-default:#fff;
+    --color-secundar:#000;
 }
 header{
+    display: flex; /*flex box*/
     height: 100vh; /*altura da pagina*/
     background-image: url('../images/image02.jpg');/*.. para achar o diretorio PAI*/
 /*salva a imagem no seu computador e depois arrasta para a pasta do projeto*/
     background-size: cover; /*navegador calcula o tamanho da imagem*/
-    color: #ffffff;
+    color:var(--color-default);
     /*shorthand unifica as propriedades do mesmo comando*/
     padding: 21rem 11rem ; /*1° valor de cima e embaixo  - 2º direita e esquerda*/
    /* padding-left: 11rem;*/
 }
-h1{
-
-    font-family: 'Poppins', sans-serif;
+body{
+    font-family:(--font-heading);
+}
+/*variaveis com a mesma caracteristica*/
+h1,
+h2,
+h3{
+    font-family:(--font-heading);
     font-weight: 900;
+
+}
+h1{
+    /*o diaplay é block*/  
     font-size: 6rem ;
+    margin-bottom: 1rem;
+}
+h2{
+    font-size: 4.4rem;
+
+}
+p{
+    font-family: 'Montserrat';
+    font-size: 3rem;
 }
 span{
+    /*display inline igual a alcora a*/
     font-family: 'Montserrat';
     font-size: 4.5rem;
 }
@@ -38,4 +63,19 @@ span{
     text-decoration:none
 
 
+}
+section{
+    display: flex;
+    gap:2rem ;
+    padding: 8.6rem;
+
+}
+.avatar{
+    border-radius: 50%;
+}
+#texto-apresentacao{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
 }
