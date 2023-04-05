@@ -21,7 +21,7 @@ function calcularOrcamento(){
     if (layout.Checked) preco += 500
     let taxaUrgencia = preco *(1.1 - prazo.value * 0.1)
     preco += taxaUrgencia
-    label_prazo.innerHTML = "Prazo (" + prazo + "semanas")
+    label_prazo.innerHTML = `Prazo (${prazo.value} semanas )`
                                 // fixando as casas decimais.                   
     output.innerHTML = "R$ " + preco.toFixed(2)
 }
