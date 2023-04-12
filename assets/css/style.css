@@ -12,6 +12,41 @@
     --color-default:#fff;
     --color-secundar:#000;
 }
+
+body{
+    font-family:(--font-heading);
+}
+
+.hamburguer{
+    display: flex; /*para separar*/
+    flex-direction: column; /*posicionar uma do lado do outro*/
+    justify-content: space-between;
+    height: 2.4rem;
+    width: 2.4rem;
+    
+    position: fixed; /*sobrepoem a rolagem da tela */
+    right: 2rem;
+    top: 2rem;
+    z-index: 10; /*mudar a posição da camada, irá sobrepor as imagens*/   
+    
+}
+.linha{
+    height: .5rem;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: .2px 2px 2px #000;  /*borda*/
+}
+.menu{
+    height: 100vh; /*100% da tela idenpendente do aparelho*/
+    width: 20rem;
+    position: fixed;
+    right: 0;
+    background-color: #fff;
+    z-index: 0;
+
+}
+
+
 header{
     display: flex; /*flex box*/
     height: 100vh; /*altura da pagina*/
@@ -23,9 +58,7 @@ header{
     padding: 21rem 11rem ; /*1° valor de cima e embaixo  - 2º direita e esquerda*/
    /* padding-left: 11rem;*/
 }
-body{
-    font-family:(--font-heading);
-}
+
 /*variaveis com a mesma caracteristica*/
 h1,
 h2,
